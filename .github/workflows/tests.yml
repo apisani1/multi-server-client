@@ -1,0 +1,59 @@
+name: Tests
+
+on:
+  workflow_call:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+jobs:
+
+  tests:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['^3.10']
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Cache Poetry dependencies
+        uses: actions/cache@v4
+        with:
+          path: .venv
+          key: ${{ runner.os }}-poetry-${{ hashFiles('**/pyproject.toml') }}
+          restore-keys: |
+            ${{ runner.os }}-poetry-
+
+      - name: Install Poetry
+        run: |
+          curl -sSL https://install.python-poetry.org | python3 -
+          poetry --version
+
+      - name: Configure Poetry
+        run: |
+          poetry config virtualenvs.create true
+          poetry config virtualenvs.in-project true
+
+      - name: Install dependencies
+        run: ./run.sh install:all
+
+      - name: Check code formatting with black
+        run: ./run.sh format:check:black
+
+      - name: Check import sorting with isort
+        run: ./run.sh format:check:isort
+
+      - name: Run type checking with mypy
+        run: ./run.sh lint:mypy
+
+      - name: Run linting with flake8
+        run: ./run.sh lint:flake8
+
+      - name: Run tests
+        run: ./run.sh tests || [ $? -eq 5 ]
