@@ -111,10 +111,10 @@ jobs:
           source test_env/bin/activate
           pip install --index-url https://test.pypi.org/simple/ \
               --extra-index-url https://pypi.org/simple \
-              multi_server_client
+              mcp_masterclass
           SITE_PACKAGES=$(python -c "import site; print(site.getsitepackages()[0])")
           export PYTHONPATH="${SITE_PACKAGES}:${PYTHONPATH:-}"
-          python -c "import multi_server_client; print('Installed version: ' + multi_server_client.__version__)"
+          python -c "import mcp_masterclass; print('Installed version: ' + mcp_masterclass.__version__)"
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
@@ -144,7 +144,7 @@ jobs:
             -H "Authorization: Token ${{ secrets.RTD_TOKEN }}" \
             -H "Content-Type: application/json" \
             -d '{"active": true}' \
-            "https://readthedocs.org/api/v3/projects/multi-server-client/versions/$TAG_NAME/" || true
+            "https://readthedocs.org/api/v3/projects/mcp-masterclass/versions/$TAG_NAME/" || true
         continue-on-error: true
 
       - name: Release Summary

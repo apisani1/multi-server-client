@@ -144,7 +144,7 @@ function lint:mypy {
 
     if [ ! -z "$PYTHON_FILES" ]; then
         mkdir -p "$MYPY_CACHE"
-        poetry run mypy "$PYTHON_FILES" --cache-dir "$MYPY_CACHE"
+        poetry run mypy $PYTHON_FILES --cache-dir "$MYPY_CACHE"
     else
         echo "No Python files to check with mypy."
     fi
@@ -155,7 +155,7 @@ function lint:flake8 {
     PYTHON_FILES="${1:-$(get:python:files)}"
 
     if [ ! -z "$PYTHON_FILES" ]; then
-        poetry run flake8 "$PYTHON_FILES"
+        poetry run flake8 $PYTHON_FILES
     else
         echo "No Python files to check with flake8."
     fi
@@ -166,7 +166,7 @@ function lint:pylint {
     PYTHON_FILES="${1:-$(get:python:files)}"
 
     if [ ! -z "$PYTHON_FILES" ]; then
-        poetry run pylint "$PYTHON_FILES"
+        poetry run pylint $PYTHON_FILES
     else
         echo "No Python files to check with pylint."
     fi
@@ -203,7 +203,7 @@ function format:black {
     PYTHON_FILES="${1:-$(get:python:files)}"
 
     if [ ! -z "$PYTHON_FILES" ]; then
-        poetry run black "$PYTHON_FILES"
+        poetry run black $PYTHON_FILES
     else
         echo "No Python files to format with black."
     fi
@@ -214,7 +214,7 @@ function format:isort {
     PYTHON_FILES="${1:-$(get:python:files)}"
 
     if [ ! -z "$PYTHON_FILES" ]; then
-        poetry run isort "$PYTHON_FILES"
+        poetry run isort $PYTHON_FILES
     else
         echo "No Python files to format with isort."
     fi
@@ -226,7 +226,7 @@ function format:check:black {
     PYTHON_FILES="${1:-$(get:python:files)}"
 
     if [ ! -z "$PYTHON_FILES" ]; then
-        poetry run black --check --diff "$PYTHON_FILES"
+        poetry run black --check --diff $PYTHON_FILES
     else
         echo "No Python files to check with black."
     fi
@@ -237,7 +237,7 @@ function format:check:isort {
     PYTHON_FILES="${1:-$(get:python:files)}"
 
     if [ ! -z "$PYTHON_FILES" ]; then
-        poetry run isort --check-only --diff "$PYTHON_FILES"
+        poetry run isort --check-only --diff $PYTHON_FILES
     else
         echo "No Python files to check with isort."
     fi

@@ -2,12 +2,22 @@
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
-[tool.poetry]
+[project]
 name = "multi-server-client"
 version = "0.0.0"
-description = "A short description of the project"
-authors = ["Antonio Pisani <antonio.pisani@gmail.com>"]
+description = "Code from MCP Masterclass Course"
+authors = [{ name = "Antonio Pisani", email = "antonio.pisani@gmail.com" }]
 readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pyautogui (>=0.9.54,<0.10.0)",
+    "pyscreeze (>=1.0.1,<2.0.0)",
+    "types-requests (>=2.32.4.20250809,<3.0.0.0)",
+    "openai (>=1.102.0,<2.0.0)",
+    "mcp[cli] (>=1.13.1,<2.0.0)",
+]
+
+[tool.poetry]
 packages = [{ include = "multi_server_client", from = "src" }]
 
 [tool.poetry.urls]
@@ -25,6 +35,9 @@ version_variable = [
 
 [tool.poetry.dependencies]
 python = "^3.10"
+pyautogui = "^0.9.54"
+pyscreeze = "^1.0.1"
+pillow = "^10.0.0"
 
 [tool.poetry.group.dev]
 optional = true
@@ -115,6 +128,8 @@ disallow_incomplete_defs = true
 ignore_missing_imports = true
 show_error_codes = true
 warn_unused_ignores = true
+explicit_package_bases = true
+
 
 [tool.pylint.MESSAGES_CONTROL]
 disable = [
@@ -157,6 +172,11 @@ ignore = [
     "build",
     "dist",
 ]
+
+[tool.pylint.SIMILARITIES]
+min-similarity-lines = 10
+ignore-comments = true
+ignore-docstrings = true
 
 [tool.isort]
 profile = "black"

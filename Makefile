@@ -1,4 +1,4 @@
-.PHONY: all format lint test tests help clean build publish publish-test docs docs-live docs-check release-major release-minor release-micro release-rc rollback
+.PHONY: all format lint test tests help clean build publish publish-test docs docs-live docs-check release-major release-minor release-micro release-rc rollback run mcp-config mcp-dev
 
 # Default target executed when no arguments are given to make.
 all: help
@@ -212,6 +212,34 @@ help-release:
 	@./run.sh help:release
 
 ######################
+# EXECUTION
+######################
+
+# Run a Python script from src/multi_server_client/
+run:
+	@if [ -z "$(filter-out $@,$(MAKECMDGOALS))" ]; then \
+		echo "Usage: make run <filename>"; \
+		exit 1; \
+	fi
+	@MODULE_NAME=$$(echo "$(filter-out $@,$(MAKECMDGOALS))" | sed 's/\.py$$//'); \
+	PYTHONPATH=src poetry run python3 -m multi_server_client.$$MODULE_NAME
+
+# Generate MCP server configuration
+mcp-config:
+	@python3 scripts/mcp_config.py $(filter-out $@,$(MAKECMDGOALS))
+
+# Run MCP inspector with automatic path prefixing
+mcp-dev:
+	@if [ -z "$(filter-out $@,$(MAKECMDGOALS))" ]; then \
+		echo "Usage: makmake instae mcp-dev <filename> [additional_args...]"; \
+		exit 1; \
+	fi
+	@mcp dev src/multi_server_client/$(filter-out $@,$(MAKECMDGOALS))
+
+%:
+	@:
+
+######################
 # HELP
 ######################
 
@@ -254,6 +282,11 @@ help:
 	@echo '  make build                - Build package'
 	@echo '  make publish-test         - Publish to TestPyPI'
 	@echo '  make publish              - Publish to PyPI'
+	@echo ''
+	@echo 'Execution:'
+	@echo '  make run <filename>       - Run Python script from src/multi_server_client/'
+	@echo '  make mcp-config <filename> [config_file]  - Generate MCP server config (extracts name from file)'
+	@echo '  make mcp-dev <filename> [args...]  - Run MCP inspector on server from src/multi_server_client/'
 	@echo ''
 	@echo 'Release:'
 	@echo '  make release-major        - Create major release'

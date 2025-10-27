@@ -1,0 +1,37 @@
+{
+  "mcpServers": {
+    "tool_server": {
+      "command": "/Users/antonio/.local/bin/poetry",
+      "args": [
+        "run",
+        "--directory",
+        "/Users/antonio/Desktop/AI/MyCode/multi-server-client",
+        "python3",
+        "-m",
+        "src.multi_server_client.tool_server"
+      ]
+    },
+    "resource_server": {
+      "command": "/Users/antonio/.local/bin/poetry",
+      "args": [
+        "run",
+        "--directory",
+        "/Users/antonio/Desktop/AI/MyCode/multi-server-client",
+        "python3",
+        "-m",
+        "src.multi_server_client.resource_server"
+      ]
+    },
+    "prompt_server": {
+      "command": "/Users/antonio/.local/bin/poetry",
+      "args": [
+        "run",
+        "--directory",
+        "/Users/antonio/Desktop/AI/MyCode/multi-server-client",
+        "python3",
+        "-m",
+        "src.multi_server_client.prompt_server"
+      ]
+    }
+  }
+}

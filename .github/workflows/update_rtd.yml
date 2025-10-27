@@ -22,7 +22,7 @@ jobs:
           echo "Listing all versions on ReadTheDocs..."
           curl -s \
             -H "Authorization: Token ${{ secrets.RTD_TOKEN }}" \
-            "https://readthedocs.org/api/v3/projects/multi-server-client/versions/" | jq
+            "https://readthedocs.org/api/v3/projects/mcp-masterclass/versions/" | jq
 
       - name: Create tag if needed
         run: |
@@ -42,7 +42,7 @@ jobs:
           curl -X POST \
             -H "Authorization: Token ${{ secrets.RTD_TOKEN }}" \
             -H "Content-Type: application/json" \
-            "https://readthedocs.org/api/v3/projects/multi-server-client/sync/"
+            "https://readthedocs.org/api/v3/projects/mcp-masterclass/sync/"
 
       - name: Wait for sync to complete
         run: sleep 20
@@ -54,7 +54,7 @@ jobs:
             -H "Authorization: Token ${{ secrets.RTD_TOKEN }}" \
             -H "Content-Type: application/json" \
             -d '{"active": true}' \
-            "https://readthedocs.org/api/v3/projects/multi-server-client/versions/v${{ github.event.inputs.version }}/"
+            "https://readthedocs.org/api/v3/projects/mcp-masterclass/versions/v${{ github.event.inputs.version }}/"
 
       - name: Trigger build
         run: |
@@ -62,8 +62,8 @@ jobs:
           curl -X POST \
             -H "Authorization: Token ${{ secrets.RTD_TOKEN }}" \
             -H "Content-Type: application/json" \
-            "https://readthedocs.org/api/v3/projects/multi-server-client/versions/v${{ github.event.inputs.version }}/builds/"
+            "https://readthedocs.org/api/v3/projects/mcp-masterclass/versions/v${{ github.event.inputs.version }}/builds/"
 
       - name: Check build status
         run: |
-          echo "View builds at https://readthedocs.org/projects/multi-server-client/builds/"
+          echo "View builds at https://readthedocs.org/projects/mcp-masterclass/builds/"
