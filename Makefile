@@ -215,14 +215,47 @@ help-release:
 # EXECUTION
 ######################
 
-# Run a Python script from src/multi_server_client/
+# Run example clients
+run-chat:
+	@poetry run python3 -m examples.clients.chat_client
+
+run-tool-client:
+	@poetry run python3 -m examples.clients.tool_client
+
+run-resource-client:
+	@poetry run python3 -m examples.clients.resource_client
+
+run-prompt-client:
+	@poetry run python3 -m examples.clients.prompt_client
+
+# Run example servers (for testing)
+run-tool-server:
+	@poetry run python3 -m examples.servers.tool_server
+
+run-resource-server:
+	@poetry run python3 -m examples.servers.resource_server
+
+run-prompt-server:
+	@poetry run python3 -m examples.servers.prompt_server
+
+# Generic run command - runs any Python module
+# Usage: make run <module.path>
+# Example: make run examples.clients.chat_client
 run:
 	@if [ -z "$(filter-out $@,$(MAKECMDGOALS))" ]; then \
-		echo "Usage: make run <filename>"; \
+		echo "Usage: make run <module.path>"; \
+		echo ""; \
+		echo "Examples:"; \
+		echo "  make run examples.clients.chat_client"; \
+		echo "  make run examples.servers.tool_server"; \
+		echo "  make run mcp_multi_server.client"; \
+		echo ""; \
+		echo "Or use convenience targets:"; \
+		echo "  make run-chat"; \
+		echo "  make run-tool-client"; \
 		exit 1; \
 	fi
-	@MODULE_NAME=$$(echo "$(filter-out $@,$(MAKECMDGOALS))" | sed 's/\.py$$//'); \
-	PYTHONPATH=src poetry run python3 -m multi_server_client.$$MODULE_NAME
+	@poetry run python3 -m $(filter-out $@,$(MAKECMDGOALS))
 
 # Generate MCP server configuration
 mcp-config:
@@ -234,7 +267,7 @@ mcp-dev:
 		echo "Usage: makmake instae mcp-dev <filename> [additional_args...]"; \
 		exit 1; \
 	fi
-	@mcp dev src/multi_server_client/$(filter-out $@,$(MAKECMDGOALS))
+	@mcp dev src/mcp_multi_server/$(filter-out $@,$(MAKECMDGOALS))
 
 %:
 	@:
@@ -284,9 +317,21 @@ help:
 	@echo '  make publish              - Publish to PyPI'
 	@echo ''
 	@echo 'Execution:'
-	@echo '  make run <filename>       - Run Python script from src/multi_server_client/'
-	@echo '  make mcp-config <filename> [config_file]  - Generate MCP server config (extracts name from file)'
-	@echo '  make mcp-dev <filename> [args...]  - Run MCP inspector on server from src/multi_server_client/'
+	@echo '  make run <module.path>    - Run any Python module'
+	@echo '                              Example: make run examples.clients.chat_client'
+	@echo ''
+	@echo '  Convenience targets:'
+	@echo '  make run-chat             - Run multi-server chat client (with OpenAI)'
+	@echo '  make run-tool-client      - Run tool client example'
+	@echo '  make run-resource-client  - Run resource client example'
+	@echo '  make run-prompt-client    - Run prompt client example'
+	@echo '  make run-tool-server      - Run tool server (for testing)'
+	@echo '  make run-resource-server  - Run resource server (for testing)'
+	@echo '  make run-prompt-server    - Run prompt server (for testing)'
+	@echo ''
+	@echo 'MCP Tools:'
+	@echo '  make mcp-config <filename> [config_file]  - Generate MCP server config'
+	@echo '  make mcp-dev <filename> [args...]  - Run MCP inspector on server'
 	@echo ''
 	@echo 'Release:'
 	@echo '  make release-major        - Create major release'
