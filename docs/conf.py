@@ -11,10 +11,10 @@ import sys
 from datetime import datetime
 
 
-project = "multi-server-client"
+project = "mcp-multi-server"
 copyright = f"{datetime.now().year}, Antonio Pisani"
 author = "Antonio Pisani"
-release = "0.0.0"
+release = "0.1.0"
 
 os.environ["SPHINX_BUILD"] = "True"
 
@@ -34,7 +34,7 @@ if src_dir.exists():
     sys.path.insert(0, str(src_dir))
 
 # Also add the specific package directory if it exists
-package_dir = src_dir / "multi_server_client"
+package_dir = src_dir / "mcp_multi_server"
 if package_dir.exists():
     sys.path.insert(0, str(package_dir))
 
@@ -125,15 +125,12 @@ html_theme_options = {
     "prev_next_buttons_location": "bottom",
     "style_external_links": False,
     "style_nav_header_background": "#2980B9",
-    "prev_next_buttons_location": "bottom",
-    "style_external_links": False,
-    "style_nav_header_background": "#2980B9",
     "analytics_id": "",
-    "canonical_url": "https://apisani1.github.io/multi-server-client/",
+    "canonical_url": "https://apisani1.github.io/mcp-multi-server/",
 }
 
 # For sitemap
-html_baseurl = "https://apisani1.github.io/multi-server-client/"
+html_baseurl = "https://apisani1.github.io/mcp-multi-server/"
 sitemap_filename = "sitemap.xml"
 
 
