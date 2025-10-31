@@ -111,6 +111,16 @@ Create a `mcp_servers.json` file:
 :caption: Getting Started
 
 Home <self>
+```
+
+<!--
+Guides coming soon - uncomment as they are created:
+
+```{toctree}
+:hidden:
+:maxdepth: 2
+:caption: Getting Started
+
 guides/installation
 guides/quickstart
 guides/configuration
@@ -127,6 +137,7 @@ guides/migration-single-to-multi
 guides/advanced-features
 guides/architecture
 ```
+-->
 
 ```{toctree}
 :hidden:
@@ -157,11 +168,15 @@ Examples <https://github.com/apisani1/multi-server-client/tree/main/examples>
 
 ## Next Steps
 
+- [API Reference](api/modules.rst) - Detailed API documentation
+- [Examples](https://github.com/apisani1/multi-server-client/tree/main/examples) - Working examples and sample servers
+
+<!--
+Coming soon - uncomment as guides are created:
 - [Installation Guide](guides/installation.md) - Get set up with MCP Multi-Server
 - [Quick Start](guides/quickstart.md) - Your first multi-server application
 - [Configuration Reference](guides/configuration.md) - Complete configuration documentation
-- [API Reference](api/modules.rst) - Detailed API documentation
-- [Examples](https://github.com/apisani1/multi-server-client/tree/main/examples) - Working examples and sample servers
+-->
 
 ## Project Status
 
