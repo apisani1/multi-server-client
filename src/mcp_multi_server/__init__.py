@@ -40,7 +40,10 @@ See Also:
 __version__ = "0.1.0"
 
 from .client import MultiServerClient
-from .config import MCPServersConfig, ServerConfig
+from .config import (
+    MCPServersConfig,
+    ServerConfig,
+)
 from .exceptions import (
     ConfigurationError,
     MultiServerClientError,

@@ -125,7 +125,7 @@ function requirements {
 
 # Helper function to get Python files
 function get:python:files {
-    echo "./src/multi_server_client/"
+    echo "./src/mcp_multi_server"
 }
 
 function get:python:files:diff {
@@ -312,7 +312,7 @@ function tests:cov {
     echo "Running tests with coverage..."
     TEST_FILE="${1:-$(get:python:files:tests)}"
     shift || true
-    poetry run pytest "$TEST_FILE" --cov=multi_server_client  --cov-report=term "$@"
+    poetry run pytest "$TEST_FILE" --cov=mcp_multi_servert  --cov-report=term "$@"
 }
 
 # Run tests in verbose mode
@@ -391,7 +391,7 @@ function help:test {
 # Generate API documentation automatically
 function docs:api {
     echo "Generating API documentation..."
-    cd docs && poetry run sphinx-apidoc -o api ../src/multi_server_client -f
+    cd docs && poetry run sphinx-apidoc -o api ../src/mcp_multi_servert -f
 }
 
 # Generate documentation

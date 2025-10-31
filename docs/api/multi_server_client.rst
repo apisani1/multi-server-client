@@ -7,7 +7,7 @@ Submodules
 multi\_server\_client.chat\_client module
 -----------------------------------------
 
-.. automodule:: multi_server_client.chat_client
+.. automodule:: mcp_multi_servert.chat_client
    :members:
    :show-inheritance:
    :undoc-members:
@@ -15,7 +15,7 @@ multi\_server\_client.chat\_client module
 multi\_server\_client.chat\_clientv2 module
 -------------------------------------------
 
-.. automodule:: multi_server_client.chat_clientv2
+.. automodule:: mcp_multi_servert.chat_clientv2
    :members:
    :show-inheritance:
    :undoc-members:
@@ -23,7 +23,7 @@ multi\_server\_client.chat\_clientv2 module
 multi\_server\_client.inventory\_db module
 ------------------------------------------
 
-.. automodule:: multi_server_client.inventory_db
+.. automodule:: mcp_multi_servert.inventory_db
    :members:
    :show-inheritance:
    :undoc-members:
@@ -31,7 +31,7 @@ multi\_server\_client.inventory\_db module
 multi\_server\_client.media\_handler module
 -------------------------------------------
 
-.. automodule:: multi_server_client.media_handler
+.. automodule:: mcp_multi_servert.media_handler
    :members:
    :show-inheritance:
    :undoc-members:
@@ -39,7 +39,7 @@ multi\_server\_client.media\_handler module
 multi\_server\_client.multi\_server\_client module
 --------------------------------------------------
 
-.. automodule:: multi_server_client.multi_server_client
+.. automodule:: mcp_multi_servert.mcp_multi_servert
    :members:
    :show-inheritance:
    :undoc-members:
@@ -47,7 +47,7 @@ multi\_server\_client.multi\_server\_client module
 multi\_server\_client.prompt\_client module
 -------------------------------------------
 
-.. automodule:: multi_server_client.prompt_client
+.. automodule:: mcp_multi_servert.prompt_client
    :members:
    :show-inheritance:
    :undoc-members:
@@ -55,7 +55,7 @@ multi\_server\_client.prompt\_client module
 multi\_server\_client.prompt\_server module
 -------------------------------------------
 
-.. automodule:: multi_server_client.prompt_server
+.. automodule:: mcp_multi_servert.prompt_server
    :members:
    :show-inheritance:
    :undoc-members:
@@ -63,7 +63,7 @@ multi\_server\_client.prompt\_server module
 multi\_server\_client.resource\_client module
 ---------------------------------------------
 
-.. automodule:: multi_server_client.resource_client
+.. automodule:: mcp_multi_servert.resource_client
    :members:
    :show-inheritance:
    :undoc-members:
@@ -71,7 +71,7 @@ multi\_server\_client.resource\_client module
 multi\_server\_client.resource\_server module
 ---------------------------------------------
 
-.. automodule:: multi_server_client.resource_server
+.. automodule:: mcp_multi_servert.resource_server
    :members:
    :show-inheritance:
    :undoc-members:
@@ -79,7 +79,7 @@ multi\_server\_client.resource\_server module
 multi\_server\_client.tool\_client module
 -----------------------------------------
 
-.. automodule:: multi_server_client.tool_client
+.. automodule:: mcp_multi_servert.tool_client
    :members:
    :show-inheritance:
    :undoc-members:
@@ -87,7 +87,7 @@ multi\_server\_client.tool\_client module
 multi\_server\_client.tool\_server module
 -----------------------------------------
 
-.. automodule:: multi_server_client.tool_server
+.. automodule:: mcp_multi_servert.tool_server
    :members:
    :show-inheritance:
    :undoc-members:
@@ -95,7 +95,7 @@ multi\_server\_client.tool\_server module
 Module contents
 ---------------
 
-.. automodule:: multi_server_client
+.. automodule:: mcp_multi_servert
    :members:
    :show-inheritance:
    :undoc-members:

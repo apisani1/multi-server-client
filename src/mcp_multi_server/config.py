@@ -1,6 +1,9 @@
 """Configuration models for MCP multi-server client."""
 
-from typing import Dict, List
+from typing import (
+    Dict,
+    List,
+)
 
 from pydantic import BaseModel
 

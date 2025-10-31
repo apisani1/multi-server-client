@@ -6,7 +6,7 @@ SPHINXOPTS    ?=
 SPHINXBUILD   ?= poetry run sphinx-build
 SOURCEDIR     = .
 BUILDDIR      = _build
-PACKAGEDIR    = ../src/multi_server_client
+PACKAGEDIR    = ../src/mcp_multi_servert
 
 # Put it first so that "make" without argument is like "make help".
 help:

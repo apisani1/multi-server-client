@@ -2,8 +2,14 @@
 
 from typing import Optional
 
-from mcp.types import ListPromptsResult, ListResourcesResult, ListResourceTemplatesResult, ListToolsResult
 from pydantic import BaseModel
+
+from mcp.types import (
+    ListPromptsResult,
+    ListResourcesResult,
+    ListResourceTemplatesResult,
+    ListToolsResult,
+)
 
 
 class ServerCapabilities(BaseModel):

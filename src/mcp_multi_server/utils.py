@@ -1,7 +1,11 @@
 """Utility functions for MCP multi-server client."""
 
 import re
-from typing import Any, Dict, List
+from typing import (
+    Any,
+    Dict,
+    List,
+)
 from urllib.parse import quote
 
 from mcp.types import Tool

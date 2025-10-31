@@ -8,7 +8,7 @@
         "/Users/antonio/Desktop/AI/MyCode/multi-server-client",
         "python3",
         "-m",
-        "src.multi_server_client.tool_server"
+        "src.mcp_multi_servert.tool_server"
       ]
     },
     "resource_server": {
@@ -19,7 +19,7 @@
         "/Users/antonio/Desktop/AI/MyCode/multi-server-client",
         "python3",
         "-m",
-        "src.multi_server_client.resource_server"
+        "src.mcp_multi_servert.resource_server"
       ]
     },
     "prompt_server": {
@@ -30,7 +30,7 @@
         "/Users/antonio/Desktop/AI/MyCode/multi-server-client",
         "python3",
         "-m",
-        "src.multi_server_client.prompt_server"
+        "src.mcp_multi_servert.prompt_server"
       ]
     }
   }

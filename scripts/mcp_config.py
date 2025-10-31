@@ -58,7 +58,7 @@ def create_or_update_config(server_name: str, filename: str, config_file: Path) 
                 "/Users/antonio/Desktop/AI/MyCode/multi-server-client",
                 "python3",
                 "-m",
-                f"src.multi_server_client.{module_name}",
+                f"src.mcp_multi_servert.{module_name}",
             ],
         }
 
@@ -92,7 +92,7 @@ def main() -> None:
     )
 
     # Construct the full path to the source file
-    src_path = Path("src/multi_server_client") / filename
+    src_path = Path("src/mcp_multi_servert") / filename
 
     # Check if source file exists
     if not src_path.exists():
