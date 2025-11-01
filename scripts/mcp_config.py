@@ -55,7 +55,7 @@ def create_or_update_config(server_name: str, filename: str, config_file: Path) 
             "args": [
                 "run",
                 "--directory",
-                "/Users/antonio/AI/MyCode/mcp-multi-servert",
+                "/Users/antonio/AI/MyCode/mcp-multi-server",
                 "python3",
                 "-m",
                 f"src.mcp_multi_servert.{module_name}",

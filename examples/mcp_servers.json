@@ -5,7 +5,7 @@
       "args": [
         "run",
         "--directory",
-        "/Users/antonio/AI/MyCode/mcp-multi-servert",
+        "/Users/antonio/AI/MyCode/mcp-multi-server",
         "python3",
         "-m",
         "examples.servers.tool_server"
@@ -16,7 +16,7 @@
       "args": [
         "run",
         "--directory",
-        "/Users/antonio/AI/MyCode/mcp-multi-servert",
+        "/Users/antonio/AI/MyCode/mcp-multi-server",
         "python3",
         "-m",
         "examples.servers.resource_server"
@@ -27,7 +27,7 @@
       "args": [
         "run",
         "--directory",
-        "/Users/antonio/AI/MyCode/mcp-multi-servert",
+        "/Users/antonio/AI/MyCode/mcp-multi-server",
         "python3",
         "-m",
         "examples.servers.prompt_server"
