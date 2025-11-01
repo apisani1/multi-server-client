@@ -152,10 +152,10 @@ api/modules
 :maxdepth: 1
 :caption: Links
 
-GitHub Repository <https://github.com/apisani1/multi-server-client>
+GitHub Repository <https://github.com/apisani1/mcp-multi-server>
 PyPI Package <https://pypi.org/project/mcp-multi-server/>
-Issue Tracker <https://github.com/apisani1/multi-server-client/issues>
-Examples <https://github.com/apisani1/multi-server-client/tree/main/examples>
+Issue Tracker <https://github.com/apisani1/mcp-multi-server/issues>
+Examples <https://github.com/apisani1/mcp-multi-server/tree/main/examples>
 ```
 
 ## Use Cases
@@ -169,7 +169,7 @@ Examples <https://github.com/apisani1/multi-server-client/tree/main/examples>
 ## Next Steps
 
 - [API Reference](api/modules.rst) - Detailed API documentation
-- [Examples](https://github.com/apisani1/multi-server-client/tree/main/examples) - Working examples and sample servers
+- [Examples](https://github.com/apisani1/mcp-multi-server/tree/main/examples) - Working examples and sample servers
 
 <!--
 Coming soon - uncomment as guides are created:
@@ -188,7 +188,7 @@ Coming soon - uncomment as guides are created:
 
 ## Support
 
-- **Issues**: [GitHub Issues](https://github.com/apisani1/multi-server-client/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/apisani1/multi-server-client/discussions)
+- **Issues**: [GitHub Issues](https://github.com/apisani1/mcp-multi-server/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/apisani1/mcp-multi-server/discussions)
 - **Documentation**: This site
-- **Examples**: [examples/](https://github.com/apisani1/multi-server-client/tree/main/examples)
+- **Examples**: [examples/](https://github.com/apisani1/mcp-multi-server/tree/main/examples)

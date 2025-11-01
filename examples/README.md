@@ -302,4 +302,4 @@ async def chat():
 
 - [MCP Protocol Documentation](https://modelcontextprotocol.io)
 - [FastMCP Documentation](https://github.com/modelcontextprotocol/fastmcp)
-- [Project Repository](https://github.com/apisani1/multi-server-client)
+- [Project Repository](https://github.com/apisani1/mcp-multi-server)

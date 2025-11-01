@@ -191,7 +191,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Links
 
-- **Documentation**: https://multi-server-client.readthedocs.io/
-- **Source Code**: https://github.com/apisani1/multi-server-client
-- **Issue Tracker**: https://github.com/apisani1/multi-server-client/issues
+- **Documentation**: https://mcp-multi-server.readthedocs.io/
+- **Source Code**: https://github.com/apisani1/mcp-multi-server
+- **Issue Tracker**: https://github.com/apisani1/mcp-multi-server/issues
 - **MCP Protocol**: https://modelcontextprotocol.io

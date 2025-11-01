@@ -33,8 +33,8 @@ Examples:
 
 See Also:
     - MCP Protocol Documentation: https://modelcontextprotocol.io
-    - GitHub Repository: https://github.com/apisani1/multi-server-client
-    - Examples: https://github.com/apisani1/multi-server-client/tree/main/examples
+    - GitHub Repository: https://github.com/apisani1/mcp-multi-server
+    - Examples: https://github.com/apisani1/mcp-multi-server/tree/main/examples
 """
 
 __version__ = "0.1.0"

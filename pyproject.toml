@@ -40,10 +40,10 @@ examples = [
 packages = [{ include = "mcp_multi_server", from = "src" }]
 
 [tool.poetry.urls]
-"Source Code" = "https://github.com/apisani1/multi-server-client"
-"Release Notes" = "https://github.com/apisani1/multi-server-client/releases"
-"Documentation" = "https://multi-server-client.readthedocs.io/"
-"Issue Tracker" = "https://github.com/apisani1/multi-server-client/issues"
+"Source Code" = "https://github.com/apisani1/mcp-multi-server"
+"Release Notes" = "https://github.com/apisani1/mcp-multi-server/releases"
+"Documentation" = "https://mcp-multi-server.readthedocs.io/"
+"Issue Tracker" = "https://github.com/apisani1/mcp-multi-server/issues"
 
 [tool.semantic_release]
 version_variable = [

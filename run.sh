@@ -555,7 +555,7 @@ function help:release {
 function help {
     echo "$0 <task> <args>"
     echo ""
-    echo "====== multi-server-client Development Tool ======"
+    echo "====== mcp-multi-server Development Tool ======"
     echo ""
     echo "Environment:"
     echo "  install              - Install core dependencies"

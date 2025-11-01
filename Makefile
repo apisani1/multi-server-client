@@ -277,7 +277,7 @@ mcp-dev:
 ######################
 
 help:
-	@echo '====== multi-server-client Development Tool ======'
+	@echo '====== mcp-multi-server Development Tool ======'
 	@echo ''
 	@echo 'Environment:'
 	@echo '  make install              - Install core dependencies'
@@ -321,7 +321,7 @@ help:
 	@echo '                              Example: make run examples.clients.chat_client'
 	@echo ''
 	@echo '  Convenience targets:'
-	@echo '  make run-chat             - Run multi-server chat client (with OpenAI)'
+	@echo '  make run-chat             - Run MCP multi-server chat client (with OpenAI)'
 	@echo '  make run-tool-client      - Run tool client example'
 	@echo '  make run-resource-client  - Run resource client example'
 	@echo '  make run-prompt-client    - Run prompt client example'
