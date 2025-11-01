@@ -5,7 +5,7 @@
       "args": [
         "run",
         "--directory",
-        "/Users/antonio/Desktop/AI/MyCode/multi-server-client",
+        "/Users/antonio/AI/MyCode/multi-server-client",
         "python3",
         "-m",
         "examples.servers.tool_server"
@@ -16,7 +16,7 @@
       "args": [
         "run",
         "--directory",
-        "/Users/antonio/Desktop/AI/MyCode/multi-server-client",
+        "/Users/antonio/AI/MyCode/multi-server-client",
         "python3",
         "-m",
         "examples.servers.resource_server"
@@ -27,7 +27,7 @@
       "args": [
         "run",
         "--directory",
-        "/Users/antonio/Desktop/AI/MyCode/multi-server-client",
+        "/Users/antonio/AI/MyCode/multi-server-client",
         "python3",
         "-m",
         "examples.servers.prompt_server"

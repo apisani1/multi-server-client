@@ -17,12 +17,12 @@ function install {
 # Install all development dependencies
 function install:dev {
     echo "Installing development dependencies..."
-    poetry install --with dev,test,lint,typing,docs
+    poetry install --with dev,test,lint,typing,docs --extras examples
 }
 
 function install:all {
     echo "Installing all dependencies..."
-    poetry install --with dev,test,lint,typing,docs --no-interaction
+    poetry install --with dev,test,lint,typing,docs --extras examples --no-interaction
 }
 
 # Install specific dependency groups
